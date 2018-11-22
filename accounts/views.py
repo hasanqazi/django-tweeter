@@ -24,7 +24,7 @@ def login_view(request):
       else:
         return redirect('tweetpage:page')
   else:
-    form.AuthenticationForm()
+    form = AuthenticationForm()
   return render(request, 'accounts/login.html', {'form':form})
 
 def logout_view(request):
